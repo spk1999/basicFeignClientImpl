@@ -127,6 +127,36 @@ public class PracticeEsewaApplication implements CommandLineRunner {
                 .build();
         //System.out.println(broadlinkIspClient.getPackageDetails(broadlinkPackageDto));
 
+        // No Due case
+        BroadlinkPaymentDto broadlinkPaymentDto=BroadlinkPaymentDto.builder()
+                .requestId("F1DEV3734273")
+                .agentTranId("3734273")
+                .clientUserName("f1soft")
+                .password("0dd565b1830c9f94da1443d678caf506")
+                .channel("eSewa")
+                .bankCode("GLBBNPKA")
+                .customerId("9808639594")
+                .userId("29071")
+                .packageId("225-532")
+                .amount("2882")
+                .build();
+        //System.out.println(broadlinkIspClient.doBillPayment(broadlinkPaymentDto));
+
+
+        // Due case
+        BroadlinkPaymentDto broadlinkPaymentDto1=BroadlinkPaymentDto.builder()
+                .requestId("F1DEV3734273")
+                .agentTranId("3734273")
+                .clientUserName("f1soft")
+                .password("0dd565b1830c9f94da1443d678caf506")
+                .channel("eSewa")
+                .bankCode("GLBBNPKA")
+                .customerId("9808639594")
+                .userId("29071")
+                .packageId("0")
+                .amount("2882")
+                .build();
+        System.out.println(broadlinkIspClient.doBillPayment(broadlinkPaymentDto1));
 
     }
 }

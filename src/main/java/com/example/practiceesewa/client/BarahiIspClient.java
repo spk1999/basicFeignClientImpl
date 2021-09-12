@@ -2,6 +2,7 @@ package com.example.practiceesewa.client;
 
 import com.example.practiceesewa.dto.BarahiIspRequestDto;
 import com.example.practiceesewa.dto.BarahiPaymentRequestDto;
+import com.example.practiceesewa.dto.BroadlinkPaymentDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 
