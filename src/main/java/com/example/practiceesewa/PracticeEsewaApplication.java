@@ -1,11 +1,10 @@
 package com.example.practiceesewa;
 
+import com.example.practiceesewa.client.BarahiIspClient;
+import com.example.practiceesewa.client.BroadlinkIspClient;
 import com.example.practiceesewa.client.IspClient;
 import com.example.practiceesewa.client.TopUpClient;
-import com.example.practiceesewa.dto.IspBillPayRequestDto;
-import com.example.practiceesewa.dto.IspFetchRequestDto;
-import com.example.practiceesewa.dto.TopUpRequestDto;
-import com.example.practiceesewa.dto.TopUpResponseDto;
+import com.example.practiceesewa.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,6 +22,10 @@ public class PracticeEsewaApplication implements CommandLineRunner {
     TopUpClient topUpClient;
     @Autowired
     IspClient ispClient;
+    @Autowired
+    BarahiIspClient barahiIspClient;
+    @Autowired
+    BroadlinkIspClient broadlinkIspClient;
 
     public static void main(String[] args) {
         SpringApplication.run(PracticeEsewaApplication.class, args);
@@ -68,11 +71,62 @@ public class PracticeEsewaApplication implements CommandLineRunner {
                 .packageid("1988131")
                 .build();
 
-        System.out.println(ispClient.payInternetBill(ispBillPayRequestDto));
+        //System.out.println(ispClient.payInternetBill(ispBillPayRequestDto));
 
 
         System.out.println("Hello I am running");
         //System.out.println(topUpRequestDto.toString());
+
+        BarahiIspRequestDto barahiIspRequestDto=BarahiIspRequestDto.builder()
+                .requestId("F1DEV5452774")
+                .agentTransId("63687117")
+                .clientUserName("f1soft")
+                .password("0dd565b1830c9f94da1443d678caf506")
+                .channel("eSewa")
+                .bankCode("GLBBNPKA")
+                .userId("tasipasanggrg")
+                .build();
+        //System.out.println(barahiIspClient.getUserData(barahiIspRequestDto));
+
+        BarahiPaymentRequestDto barahiPaymentRequestDto=BarahiPaymentRequestDto.builder()
+                .requestId("F1DEV5452774")
+                .agentTransId("F1DEV5452774")
+                .clientusername("f1soft")
+                .password("0dd565b1830c9f94da1443d678caf506")
+                .channel("eSewa")
+                .bankCode("GLBBNPKA")
+                .customerId("9808639594")
+                .userId("tasipasanggrg")
+                .packageId("1-22418-3-1")
+                .amount("1695")
+                .build();
+        //System.out.println(barahiIspClient.getPaymentData(barahiPaymentRequestDto));
+
+        BroadlinkClentDetailsDto broadlinkClentDetailsDto=BroadlinkClentDetailsDto.builder()
+                .requestId("F1DEV3734273")
+                .agentTransId("3734273")
+                .clientUserName("f1soft")
+                .password("0dd565b1830c9f94da1443d678caf506")
+                .channel("eSewa")
+                .bankCode("GLBBNPKA")
+                .cusomerId("9808639594")
+                .userId("29071")
+                .build();
+        //System.out.println(broadlinkIspClient.getCustomerDetails(broadlinkClentDetailsDto));
+
+        BroadlinkPackageDto broadlinkPackageDto=BroadlinkPackageDto.builder()
+                .requestId("F1DEV3734273")
+                .agentTransId("3734273")
+                .clientUserName("f1soft")
+                .password("0dd565b1830c9f94da1443d678caf506")
+                .channel("eSewa")
+                .bankCode("GLBBNPKA")
+                .customerId("9808639594")
+                .userId("29071")
+                .packageId("225-532")
+                .build();
+        //System.out.println(broadlinkIspClient.getPackageDetails(broadlinkPackageDto));
+
 
     }
 }
