@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.HashMap;
 import java.util.Map;
 
-public class IspFetchRequestDto {
+public class WorldLinkInquiryRequestDto {
 
     @JsonProperty("requestid")
     private String requestid;
@@ -37,7 +37,7 @@ public class IspFetchRequestDto {
         this.requestid = requestid;
     }
 
-    public IspFetchRequestDto withRequestid(String requestid) {
+    public WorldLinkInquiryRequestDto withRequestid(String requestid) {
         this.requestid = requestid;
         return this;
     }
@@ -52,7 +52,7 @@ public class IspFetchRequestDto {
         this.agenttransid = agenttransid;
     }
 
-    public IspFetchRequestDto withAgenttransid(String agenttransid) {
+    public WorldLinkInquiryRequestDto withAgenttransid(String agenttransid) {
         this.agenttransid = agenttransid;
         return this;
     }
@@ -67,7 +67,7 @@ public class IspFetchRequestDto {
         this.customerid = customerid;
     }
 
-    public IspFetchRequestDto withCustomerid(String customerid) {
+    public WorldLinkInquiryRequestDto withCustomerid(String customerid) {
         this.customerid = customerid;
         return this;
     }
@@ -82,7 +82,7 @@ public class IspFetchRequestDto {
         this.clientusername = clientusername;
     }
 
-    public IspFetchRequestDto withClientusername(String clientusername) {
+    public WorldLinkInquiryRequestDto withClientusername(String clientusername) {
         this.clientusername = clientusername;
         return this;
     }
@@ -97,7 +97,7 @@ public class IspFetchRequestDto {
         this.password = password;
     }
 
-    public IspFetchRequestDto withPassword(String password) {
+    public WorldLinkInquiryRequestDto withPassword(String password) {
         this.password = password;
         return this;
     }
@@ -112,7 +112,7 @@ public class IspFetchRequestDto {
         this.channel = channel;
     }
 
-    public IspFetchRequestDto withChannel(String channel) {
+    public WorldLinkInquiryRequestDto withChannel(String channel) {
         this.channel = channel;
         return this;
     }
@@ -127,7 +127,7 @@ public class IspFetchRequestDto {
         this.userid = userid;
     }
 
-    public IspFetchRequestDto withUserid(String userid) {
+    public WorldLinkInquiryRequestDto withUserid(String userid) {
         this.userid = userid;
         return this;
     }
@@ -142,7 +142,7 @@ public class IspFetchRequestDto {
         this.additionalProperties.put(name, value);
     }
 
-    public IspFetchRequestDto withAdditionalProperty(String name, Object value) {
+    public WorldLinkInquiryRequestDto withAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
         return this;
     }
