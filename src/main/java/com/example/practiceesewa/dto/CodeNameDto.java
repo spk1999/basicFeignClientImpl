@@ -1,5 +1,6 @@
 package com.example.practiceesewa.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 @AllArgsConstructor
@@ -8,6 +9,8 @@ import lombok.*;
 @Setter
 @Builder
 public class CodeNameDto {
+    @JsonProperty("code")
     private String code;
+    @JsonProperty("name")
     private String name;
 }
