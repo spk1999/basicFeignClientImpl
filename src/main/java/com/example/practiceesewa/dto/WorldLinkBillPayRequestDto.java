@@ -8,7 +8,7 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class IspBillPayRequestDto {
+public class WorldLinkBillPayRequestDto {
 
     @JsonProperty("requestid")
     private String requestid;
