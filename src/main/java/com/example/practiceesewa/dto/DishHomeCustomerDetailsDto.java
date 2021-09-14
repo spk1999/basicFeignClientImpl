@@ -8,13 +8,13 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class BarahiPaymentRequestDto {
+public class DishHomeCustomerDetailsDto {
     @JsonProperty("requestid")
     private String requestId;
     @JsonProperty("agenttransid")
     private String agentTransId;
-    @JsonProperty("clientuserName")
-    private String clientusername;
+    @JsonProperty("clientusername")
+    private String clientUserName;
     @JsonProperty("password")
     private String password;
     @JsonProperty("channel")
@@ -25,8 +25,4 @@ public class BarahiPaymentRequestDto {
     private String customerId;
     @JsonProperty("userid")
     private String userId;
-    @JsonProperty("packageid")
-    private String packageId;
-    @JsonProperty("amount")
-    private String amount;
 }
