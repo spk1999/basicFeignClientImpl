@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @FeignClient(name = "topup" ,url = "http://billpaytest.f1soft.com.np/")
 public interface TopUpClient {
 
- @PostMapping
+ @PostMapping("/api")
  TopUpResponseDto topUp(TopUpRequestDto topUpRequestDto);
 
 }
