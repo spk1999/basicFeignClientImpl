@@ -8,13 +8,14 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class BarahiPaymentRequestDto {
+public class UltranetIspBillPaymentDto {
+
     @JsonProperty("requestid")
     private String requestId;
     @JsonProperty("agenttransid")
     private String agentTransId;
-    @JsonProperty("clientuserName")
-    private String clientusername;
+    @JsonProperty("clientusername")
+    private String clientUserName;
     @JsonProperty("password")
     private String password;
     @JsonProperty("channel")
@@ -28,5 +29,5 @@ public class BarahiPaymentRequestDto {
     @JsonProperty("packageid")
     private String packageId;
     @JsonProperty("amount")
-    private String amount;
+    private int amount;
 }

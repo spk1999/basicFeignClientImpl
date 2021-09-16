@@ -8,25 +8,22 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class BarahiPaymentRequestDto {
+public class WaterMarkElectricityBillInquiryDto {
+
     @JsonProperty("requestid")
     private String requestId;
     @JsonProperty("agenttransid")
     private String agentTransId;
-    @JsonProperty("clientuserName")
-    private String clientusername;
+    @JsonProperty("clientusername")
+    private String clientUserName;
     @JsonProperty("password")
     private String password;
     @JsonProperty("channel")
     private String channel;
     @JsonProperty("bankcode")
     private String bankCode;
-    @JsonProperty("customerid")
-    private String customerId;
-    @JsonProperty("userid")
-    private String userId;
-    @JsonProperty("packageid")
-    private String packageId;
-    @JsonProperty("amount")
-    private String amount;
+    @JsonProperty("customercode")
+    private String customerCode;
+    @JsonProperty("counter")
+    private String counter;
 }
