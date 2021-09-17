@@ -11,6 +11,9 @@ public interface WaterSupplyClient {
     @PostMapping("/khanepani/counters")
     public Object getH2OKhanepaniList(H2OKhanepaniCountersDto h2OKhanepaniCountersDto);
 
+    @PostMapping("/khanepani/billInquiry")
+    public Object getH2OKhanepaniBillInquiry(H2OKhanepaniBillInquiryDto h2OKhanepaniBillInquiryDto);
+
     @PostMapping("/khanepani/billPayment")
     public Object getH2OKhanepaniBillPayment(H2OKhanepaniPaymentDto h2OKhanepaniPaymentDto);
 

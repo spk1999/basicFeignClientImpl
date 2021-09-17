@@ -24,12 +24,19 @@ public class WaterSupplyController {
         this.waterSupplyClient = waterSupplyClient;
     }
 
-    //Khanepani
+    //H2O Khanepani
     @PostMapping("/khanepani/counters")
     public ResponseEntity<JsonObject> getH2OKhanepaniList(
             @RequestBody H2OKhanepaniCountersDto h2OKhanepaniCountersDto) {
         gson = new Gson();
         return new ResponseEntity(gson.toJson(waterSupplyClient.getH2OKhanepaniList(h2OKhanepaniCountersDto)), HttpStatus.OK);
+    }
+
+    @PostMapping("/khanepani/billInquiry")
+    public ResponseEntity<JsonObject> getH2OKhanepaniBillInquiry(
+            @RequestBody H2OKhanepaniBillInquiryDto h2OKhanepaniBillInquiryDto) {
+        gson = new Gson();
+        return new ResponseEntity(gson.toJson(waterSupplyClient.getH2OKhanepaniBillInquiry(h2OKhanepaniBillInquiryDto)), HttpStatus.OK);
     }
 
     @PostMapping("/khanepani/billPayment")
